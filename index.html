@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style/bootstrap-5.3.2-dist/js/bootstrap.js">
+</head>
+
+<body class="bg-dark text-light  pt-5   ">
+    <section id=" main " class=" container text-light  pt-5   ">
+        <h2 class="text-center ">CRUDS</h2>
+        <p class="text-center text-capitalize">create read update delete save</p>
+        <div class="titleBox  m-3 ">
+            <input type="text " name="text " id="title " placeholder=" title " class=" title m-2 p-2 text-capitalize ">
+            <small class="alert alert-danger p-2 m-2">You should enter the title</small>
+        </div>
+        <div class="totalPrice row  m-3   text-capitalize  ">
+            <input onkeyup="getTotal()" type="number" name="price " id="price " placeholder="price " class="price col-sm-4 col-md-3 col-lg-2 m-2 p-2 ">
+            <input onkeyup="getTotal()" type="number" name="tasx" id="tasx " placeholder="tasx " class="tasx col-sm-4 col-md-3 col-lg-2 m-2 p-2 ">
+            <input onkeyup="getTotal()" type="number" name="ads" id="ads " placeholder="ads " class="ads col-sm-4 col-md-3 col-lg-2 m-2 p-2 ">
+            <input onkeyup="getTotal()" type="number" name="" id="discouunt " placeholder="discouunt " class=" discouunt col-sm-4 col-md-3 col-lg-2 m-2 p-2 ">
+            <small class=" total col-sm-4 col-md-2 col-lg-1 m-2 p-2  rounded "></small>
+        </div>
+        <div class=" m-3   text-light  ">
+            <input type="number " name="count " id="count " placeholder="count " class="count  p-2 text-capitalize ">
+        </div>
+        <div class="  m-3 ">
+            <input type="text " name="category " id="category " placeholder="category " class="category  p-2 text-capitalize ">
+        </div>
+        <div class=" m-3 text-center ">
+            <a href="# " class=" create btn btn-info rounded text-light text-capitalize  "> create</a>
+        </div>
+        <div id="outputs" class="">
+            <div id="search"  >
+                <input onkeyup="searchPrd(this.value)" type="text " name="search "   placeholder="search " class="search   p-2 text-capitalize ">
+            </div>
+            <div class=" m-3 text-center   ">
+                <button onclick=" searchMood(this.id)" id="search by title" class="btn btn-info rounded text-light text-capitalize  col m-1 "> search by title</button>
+                <button onclick="searchMood(this.id)" id="search by category" class="btn btn-info rounded text-light text-capitalize col m-1"> search by category</buttonid>
+            </div>
+            <div class="deleteAll "></div>
+            <table  class=" text-center">
+                <tr class="m-1">
+                    <th class="m-5">ID</th>
+                    <th class="m-5">Title</th>
+                    <th class="m-5">Price</th>
+                    <th class="m-5">Taxes</th>
+                    <th class="m-5">ADS</th>
+                    <th class="m-5">Discount</th>
+                    <th class="m-5">Category</th>
+                    <th class="m-5">Update</th>
+                    <th class="m-5">Delete</th>
+                </tr>
+                <tbody class="tableBody">
+                   
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>
